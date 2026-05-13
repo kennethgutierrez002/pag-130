@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>📋 Lista de Tareas</h1>
+
+        <form id="formulario">
+
+            <input 
+                type="text" 
+                id="titulo"
+                placeholder="Escribe una tarea..."
+                required
+            >
+
+            <select id="prioridad">
+                <option value="Baja">Baja</option>
+                <option value="Media">Media</option>
+                <option value="Alta">Alta</option>
+            </select>
+
+            <button type="submit">
+                Agregar
+            </button>
+
+        </form>
+
+        <div class="botones">
+
+            <button onclick="mostrarTareas('todas')">
+                Todas
+            </button>
+
+            <button onclick="mostrarTareas('pendientes')">
+                Pendientes
+            </button>
+
+            <button onclick="mostrarTareas('completadas')">
+                Completadas
+            </button>
+
+        </div>
+
+        <div id="lista"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
